@@ -30,6 +30,13 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   z-index: 5;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.goods__arrow:hover,
+.goods__arrow:focus,
+.goods__arrow :active {
+  background-color: #f0ead6;
 }
 
 .goods__arrow-prev {
@@ -41,13 +48,13 @@
   transform: rotate(180deg);
 }
 
-@media (min-wigth: 768px) {
+@media (min-width: 768px) {
   .goods__title {
     margin-bottom: 36px;
   }
 
   .goods__helper {
-    max-width: 700px;
+    width: 700px;
     margin: 0 auto;
   }
 
@@ -64,7 +71,7 @@
   }
 }
 
-@media (min-wigth: 1024px) {
+@media (min-width: 1024px) {
   .goods {
     padding: 70px 0;
   }
@@ -80,7 +87,7 @@
   }
 
   .goods__helper {
-    max-width: 764px;
+    width: 764px;
   }
 
   .goods__arrow {
@@ -97,9 +104,9 @@
   }
 }
 
-@media (min-wigth: 1440px) {
+@media (min-width: 1440px) {
   .goods__helper {
-    max-width: 1158px;
+    width: 1158px;
   }
 
   .goods__arrow-prev {

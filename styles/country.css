@@ -1,8 +1,19 @@
+.cuntry {
+  position: relative;
+}
+
 .country__btn {
   position: relative;
   padding: 0 13px 0 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.5s ease-in-out;
 }
 
+.country__btn:hover,
+.country__btn :focus,
+.country__btn:active {
+  border-color: #000000;
+}
 .country__btn::after {
   content: '';
   position: absolute;
@@ -15,7 +26,60 @@
   background: url('../images/arrow-down.svg') no-repeat center;
 }
 
-.country__list {
+.country__wrapper {
   display: none;
+  position: absolute;
+  width: 184px;
+  top: 40px;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 16px 8px 16px 16px;
 }
 
+.country__wrapper-open {
+  display: block;
+}
+
+.country__list {
+  max-height: 102px;
+}
+
+.county__item {
+  margin-bottom: 10px;
+}
+
+.country__item :last-child {
+  margin-bottom: 0;
+}
+
+.country__choise {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.country__track {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  height: 4px;
+}
+
+.country__scrollbar {
+  background-color: #ececec;
+  border-radius: 2px;
+}
+
+@media (min-width: 1024px) {
+  .country__list {
+    max-height: 120px;
+  }
+
+  .country__choise {
+    font-size: 16px;
+  }
+}

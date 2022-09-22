@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 14px;
+  align-items: center;
 }
 
 .product__title {
@@ -44,7 +45,7 @@
   color: #8793ff;
 }
 
-@media (min-wigth: 768px) {
+@media (min-width: 768px) {
   .product {
     width: 340px;
   }
@@ -59,7 +60,7 @@
   }
 }
 
-@media (min-wigth: 1024px) {
+@media (min-width: 1024px) {
   .product {
     width: 370px;
   }

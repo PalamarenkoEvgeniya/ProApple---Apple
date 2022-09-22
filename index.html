@@ -43,9 +43,10 @@
       type="image/png"
     />
     <link rel="stylesheet" href="lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="lib/simplebar.css" />
     <link rel="stylesheet" href="styles/index.css" />
 
-    <script src="lib/swiper-bundle.esm.browser.min.js"></script>
+    <script src="lib/simplebar.min.js" defer></script>
     <script src="scripts/index.js" type="module"></script>
   </head>
 
@@ -72,20 +73,43 @@
         <div class="header__country country">
           <button class="country__btn">Страна</button>
         </div>
-        <ul class="country__list">
-          <li class="county__item">
-            <button class="country__btn">Russia, RUB</button>
-          </li>
-          <li class="county__item">
-            <button class="country__btn">USA, USD</button>
-          </li>
-          <li class="county__item">
-            <button class="country__btn">Germany, EURO</button>
-          </li>
-          <li class="county__item">
-            <button class="country__btn">Great Britain, GBP</button>
-          </li>
-        </ul>
+        <div class="country__wrapper">
+          <ul class="country__list">
+            <li class="county__item">
+              <button class="country__choise" data-currency="USD">USA</button>
+            </li>
+            <li class="county__item">
+              <button class="country__choise" data-currency="RUB">
+                Russia
+              </button>
+            </li>
+            <li class="county__item">
+              <button class="country__choise" data-currency="UAH">
+                Ukraine
+              </button>
+            </li>
+            <li class="county__item">
+              <button class="country__choise" data-currency="GBP">
+                Great Britain
+              </button>
+            </li>
+            <li class="county__item">
+              <button class="country__choise" data-currency="AUD">
+                Australia
+              </button>
+            </li>
+            <li class="county__item">
+              <button class="country__choise" data-currency="KZT">
+                Kazakhstan
+              </button>
+            </li>
+            <li class="county__item">
+              <button class="country__choise" data-currency="EUR">
+                Germany
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -141,7 +165,7 @@
                     </div>
                     <div class="product__info">
                       <h3 class="product__title">iPhone 14 PRO</h3>
-                      <p class="product__price">$1050</p>
+                      <p class="product__price" data-price="1050">$1050</p>
                     </div>
 
                     <button class="product__more">
@@ -166,7 +190,7 @@
                     </div>
                     <div class="product__info">
                       <h3 class="product__title">iPhone 14</h3>
-                      <p class="product__price">$799</p>
+                      <p class="product__price" data-price="799">$799</p>
                     </div>
 
                     <button class="product__more">
@@ -191,7 +215,7 @@
                     </div>
                     <div class="product__info">
                       <h3 class="product__title">AirPods Pro</h3>
-                      <p class="product__price">$249</p>
+                      <p class="product__price" data-price="249">$249</p>
                     </div>
 
                     <button class="product__more">
@@ -216,7 +240,7 @@
                     </div>
                     <div class="product__info">
                       <h3 class="product__title">Apple Watch Ultra</h3>
-                      <p class="product__price">$799</p>
+                      <p class="product__price" data-price="799">$799</p>
                     </div>
 
                     <button class="product__more">
@@ -240,8 +264,8 @@
                       />
                     </div>
                     <div class="product__info">
-                      <h3 class="product__title">Apple Watch Series 8</h3>
-                      <p class="product__price">$399</p>
+                      <h3 class="product__title">Apple Watch Series&nbsp8</h3>
+                      <p class="product__price" data-price="399">$399</p>
                     </div>
 
                     <button class="product__more">
@@ -318,17 +342,19 @@
               </li>
             </ul>
           </div>
-          <p class="footer__copyright">Copyright © 2022 ProApple</p>
         </div>
+        <p class="footer__copyright">Copyright © 2022 ProApple</p>
       </div>
     </footer>
+
+    <!--  svg arrow-left -->
 
     <svg style="display: none">
       <symbol
         id="arrow-left"
         width="13"
         height="8"
-        viewBox="0 0 13 8"
+        viewbox="0 0 13 8"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -337,5 +363,27 @@
         />
       </symbol>
     </svg>
+
+    <!--    modal    -->
+
+    <div class="modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Узнай все о новом iPhone 14</h2>
+        <form action="" class="modal__form form">
+          <label class="form__lable">
+            <span class="form__placeholder">Ваше имя</span>
+            <input type="text" class="form__input" />
+          </label>
+          <label class="form__lable">
+            <span class="form__placeholder">Телефон</span>
+            <input type="text" class="form__input" />
+          </label>
+
+          <button class="form__submit" type="submit">
+            Заказать консультацию
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

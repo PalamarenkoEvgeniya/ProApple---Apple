@@ -3,6 +3,17 @@
   gap: 20px 50px;
 }
 
+.navigation__item {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.navigation__item:hover,
+.navigation__item:focus,
+.navigation__item :active {
+  border-color: #000000;
+}
+
 .navigation__list-column--mob {
   flex-direction: column;
 }
