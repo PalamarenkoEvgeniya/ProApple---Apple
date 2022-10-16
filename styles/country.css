@@ -1,25 +1,55 @@
-.cuntry {
+.country {
   position: relative;
 }
 
 .country__btn {
   position: relative;
   padding: 0 13px 0 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.5s ease-in-out;
 }
 
-.country__btn:hover,
-.country__btn :focus,
-.country__btn:active {
-  border-color: #000000;
+.country__btn:hover::before,
+.country__btn :focus::before,
+.country__btn:active ::before {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
 }
+
+.country__btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background-color: #f5f5f7;
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
 .country__btn::after {
   content: '';
   position: absolute;
   display: block;
   right: 0;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 9px;
   height: 6px;
@@ -33,6 +63,7 @@
   top: 40px;
   right: 0;
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   padding: 16px 8px 16px 16px;

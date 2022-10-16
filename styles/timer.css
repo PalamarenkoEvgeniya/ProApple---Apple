@@ -1,11 +1,18 @@
+
 .timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 4px;
   text-align: center;
 }
 
 .timer__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
   flex: 0 0 80px;
 }
 
@@ -29,6 +36,7 @@
   }
 
   .timer__item {
+    -ms-flex-preferred-size: 120px;
     flex-basis: 120px;
   }
 

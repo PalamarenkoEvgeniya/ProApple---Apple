@@ -1,3 +1,4 @@
+
 .goods {
   padding: 40px 0;
 }
@@ -30,6 +31,8 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   z-index: 5;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
 
@@ -45,6 +48,8 @@
 
 .goods__arrow-next {
   right: -5px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 

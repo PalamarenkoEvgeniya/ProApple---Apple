@@ -6,8 +6,15 @@
 }
 
 .banner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -34,8 +41,14 @@
   padding: 16px 20px;
   border: 1px solid #70a5d5;
   border-radius: 32px;
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
   transition-property: color, background-color;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
 
